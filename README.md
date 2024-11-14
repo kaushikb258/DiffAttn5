@@ -2,6 +2,11 @@
 
 This work is inspired by SEG (https://arxiv.org/abs/2408.00760)
 
+# Guided Sampling from Diffusion Models
+$ \widehat{\epsilon}(x_t, t, c) = \gamma \epsilon_{\theta}(x_t, t, c, A) - (\gamma - 1) \epsilon_{\theta}(x_t, t, c, A^{perturbed}) $
+where $\gamma$ is the guidance scale, $A$ is the attention map and $A^{perturbed}$ is the perturbed attention map using one of the 5 methods proposed here.
+
+
 ## 5 Methods to "Perturb" the Attention Maps in the Guidance Network 
 
 **Method1: Perturb the Query weights 
